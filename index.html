@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF to Word Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 PDF to Word Converter</h1>
+    
+    <div class="converter-tabs">
+      <button class="tab-button active" data-tab="pdf-to-word">PDF → Word</button>
+      <button class="tab-button" data-tab="word-to-pdf">Word → PDF</button>
+    </div>
+
+    <div id="pdf-to-word" class="tab-content active">
+      <div class="upload-area" id="uploadArea1">
+        <p>📁 Drag & Drop your PDF here</p>
+        <p>or</p>
+        <button class="upload-button" onclick="document.getElementById('fileInput1').click()">Choose File</button>
+        <input type="file" id="fileInput1" accept=".pdf" />
+      </div>
+    </div>
+
+    <div id="word-to-pdf" class="tab-content">
+      <div class="upload-area" id="uploadArea2">
+        <p>📁 Drag & Drop your Word file here</p>
+        <p>or</p>
+        <button class="upload-button" onclick="document.getElementById('fileInput2').click()">Choose File</button>
+        <input type="file" id="fileInput2" accept=".docx,.doc" />
+      </div>
+    </div>
+
+    <div class="file-list" id="fileList"></div>
+
+    <button class="convert-button" id="convertButton">Convert</button>
+
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+      <p>Converting your file...</p>
+    </div>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
